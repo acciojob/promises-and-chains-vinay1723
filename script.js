@@ -6,7 +6,7 @@ let age = document.getElementById('age');
 form.addEventListener('submit',(e) => {
 	e.preventDefault();
 	if (!name.value || !age.value) {
-		alert('Please enter valid details.')
+		alert('Please enter valid details')
 		return;
 	}
      let ageNum = Number(age.value);
@@ -14,9 +14,9 @@ form.addEventListener('submit',(e) => {
 
 		setTimeout(() => {
 		if (ageNum >= 18) {
-				resolve("Welcome, . You can vote.")
+				resolve(`Welcome, ${name.value}. You can vote.`)
 		}else {
-			resolve("Oh sorry . You aren't old enough.")
+			resolve(`Oh sorry ${name.value}. You aren't old enough.`)
 		}
 		},4000)
 	});
